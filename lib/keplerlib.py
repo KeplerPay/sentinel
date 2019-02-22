@@ -19,7 +19,7 @@ def is_valid_kepler_address(address, network='mainnet'):
     # 4 checksum bytes are appended so the total number of
     # base58 encoded bytes should be 25.  This means the number of characters
     # in the encoding should be about 34 ( 25 * log2( 256 ) / log2( 58 ) ).
-    kepler_version = 140 if network == 'testnet' else 76
+    kepler_version = 140 if network == 'testnet' else 45
 
     # Check length (This is important because the base58 library has problems
     # with long addresses (which are invalid anyway).
@@ -269,4 +269,4 @@ def blocks_to_seconds(blocks):
     Return the estimated number of seconds which will transpire for a given
     number of blocks.
     """
-    return blocks * 2.62 * 60
+    return blocks * 3.2 * 60 # blocks every 3 mins but probably slower

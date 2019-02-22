@@ -16,7 +16,7 @@ def test_keplerd():
     config_text = KeplerConfig.slurp_config_file(config.kepler_conf)
     network = 'mainnet'
     is_testnet = False
-    genesis_hash = u'00000ffd590b1485b3caadc19b22e6379c733355108f107a430458cdf3407ab6'
+    genesis_hash = u'da7cf0305dd1dd0c59ea0f2b5f0cd2a65ebe5ce4d70b01907e17b830b6dbdf23' # change later
     for line in config_text.split("\n"):
         if line.startswith('testnet=1'):
             network = 'testnet'

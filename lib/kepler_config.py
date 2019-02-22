@@ -34,7 +34,7 @@ class KeplerConfig():
         creds = {key: value for (key, value) in match}
 
         # standard Kepler defaults...
-        default_port = 9998 if (network == 'mainnet') else 19998
+        default_port = 12101 if (network == 'mainnet') else 12201
 
         # use default port for network if not specified in kepler.conf
         if not ('port' in creds):

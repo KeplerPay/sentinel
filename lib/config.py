@@ -19,8 +19,9 @@ def get_kepler_conf():
         kepler_conf = os.path.join(os.getenv('APPDATA'), "KeplerCore/kepler.conf")
     else:
         home = os.environ.get('HOME')
-
-        kepler_conf = os.path.join(home, ".keplercore/kepler.conf")
+	kepler_conf = os.path.join(home, "/etc/keplercore/kepler.conf")
+	if ( not os.path.isfile(kepler_conf) ):
+        	kepler_conf = os.path.join(home, ".keplercore/kepler.conf")
         if sys.platform == 'darwin':
             kepler_conf = os.path.join(home, "Library/Application Support/KeplerCore/kepler.conf")
 
