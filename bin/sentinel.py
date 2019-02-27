@@ -176,10 +176,10 @@ def main():
     # check_object_validity(keplerd)
 
     # vote to delete expired proposals
-    prune_expired_proposals(keplerd)
+    #prune_expired_proposals(keplerd)
 
     # create a Superblock if necessary
-    attempt_superblock_creation(keplerd)
+    #attempt_superblock_creation(keplerd)
 
     # schedule the next run
     Scheduler.schedule_next_run()
