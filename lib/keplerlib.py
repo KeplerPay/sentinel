@@ -269,4 +269,4 @@ def blocks_to_seconds(blocks):
     Return the estimated number of seconds which will transpire for a given
     number of blocks.
     """
-    return blocks * 3.2 * 60 # blocks every 3 mins but probably slower
+    return blocks * 2.3 * 60 # blocks every 2 mins but probably slower
